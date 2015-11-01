@@ -14,7 +14,9 @@ J = 0;
 %               You should set J to the cost.
 
 
-J = (1/(2*m)) * sum(power((X*theta-y),2))
+% J = (1/(2*m)) * sum(power((X*theta-y),2))
+% J = (1/(2*m)) * sum((X*theta-y) .^ 2)
+J = (1/(2*m)) * sum(((theta'*X')'-y) .^ 2)
 % J = (1/2)*m*power((theta'*X') - y,2)
 
 % =========================================================================
